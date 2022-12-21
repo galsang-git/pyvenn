@@ -123,7 +123,7 @@ def get_labels(data, fill=["number"]):
         for k in set_collections:
             labels[k] += "(%.1f%%)" % (100.0 * len(set_collections[k]) / data_size)
 
-    return labels
+    return set_collections, labels
 
 def venn2(labels, names=['A', 'B'], **options):
     """
